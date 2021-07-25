@@ -2,31 +2,36 @@
   "expo": {
     "name": "CityPetro",
     "slug": "CityPetro",
-    "version": "1.0.0",
+    "version": "1.0.6",
+    "platforms": ["ios", "android", "web"],
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/cpIcon.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/cpSplash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#3366FF"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": false
     },
     "android": {
+      "package": "com.citypetro.transport",
+      "versionCode": 7,
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "foregroundImage": "./assets/cpAdapIcon.png",
+        "backgroundColor": "#3366FF"
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/cpFavIcon.png"
+    },
+    "description": "City Petro App",
+    "notification": {
+      "iosDisplayInForeground": true
     }
   }
 }
