@@ -3,7 +3,7 @@ import { useContext } from "react";
 
 import AuthContext from "./context";
 import authStorage from "./storage";
-import { DevSettings } from "react-native";
+import CodePush from "react-native-code-push";
 
 import expoPushTokensApi from "../api/expoPushTokens";
 import * as Notifications from "expo-notifications";
@@ -20,7 +20,7 @@ export default useAuth = () => {
     const pushToken = await Notifications.getExpoPushTokenAsync();
     expoPushTokensApi.removePushToken(pushToken.data);
     await authStorage.removeToken();
-    DevSettings.reload();
+    CodePush.restartApp();
   };
 
   const isAdmin = () => {
