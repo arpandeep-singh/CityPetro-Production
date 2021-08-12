@@ -24,9 +24,9 @@ const getUser = async () => {
   return token ? jwtDecode(token) : null;
 };
 
-const removeToken = () => {
+const removeToken = async () => {
   try {
-    return SecureStore.deleteItemAsync(key);
+    return await SecureStore.deleteItemAsync(key);
   } catch (error) {
     console.log("Error removing the auth token", error);
   }

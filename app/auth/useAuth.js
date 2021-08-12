@@ -20,7 +20,6 @@ export default useAuth = () => {
     const pushToken = await Notifications.getExpoPushTokenAsync();
     expoPushTokensApi.removePushToken(pushToken.data);
     await authStorage.removeToken();
-    CodePush.restartApp();
   };
 
   const isAdmin = () => {
